@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galeri - X </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+
+         <!-- LIQUID GLASS -->
+    <div class="nav-indicator"></div>
+    
+    
+        <!-- MENU -->
+    <a href="index.html" class="nav-item">Home</a>
+
+    <a href="jadwal.html" class="nav-item">Jadwal</a>
+
+    <a href="anggota.html" class="nav-item">Anggota</a>
+   
+    <a href="tentang.html" class ="nav-item">Tentang</a>
+
+    <a href="galeri.html" class="nav-item active">Galeri</a>
+
+
+        </div>
+
+    </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri kelas X pplg 2</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <h1 style="color: white !important;">
+    📸 Galeri Kelas X RPL
+</h1>
+
+     <div class="gallery">
+
+    <!-- KOTAK TAMBAH -->
+    <label class="upload-box">
+
+        <span>+</span>
+
+        <input
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            hidden
+        >
+
+    </label>
+
+
+    <!-- DERETAN FOTO -->
+    <div id="photo-list"></div>
+
+</div>
+
+
+
+    <p id="status"></p>
+
+    <script src="galeri.js"></script>
+ <script>
+
+const nav=document.querySelector(".navbar");
+const glass=document.querySelector(".nav-indicator");
+const items=document.querySelectorAll(".nav-item");
+
+function move(item){
+    glass.style.left=item.offsetLeft+"px";
+    glass.style.width=item.offsetWidth+"px";
+}
+
+items.forEach(item=>{
+    item.addEventListener("click",e=>{
+
+        items.forEach(i=>i.classList.remove("active"));
+        item.classList.add("active");
+
+        move(item);
+    });
+});
+
+window.onload=()=>{
+    move(document.querySelector(".active"));
+};
+
+</script>
+
+
+</body>
+</html>

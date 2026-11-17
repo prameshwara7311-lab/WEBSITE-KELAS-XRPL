@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tentang Kelas - X RPL</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+
+          <!-- LIQUID GLASS -->
+    <div class="nav-indicator"></div>
+
+     <!-- MENU -->
+    <a href="index.html" class="nav-item">Home</a>
+
+    <a href="jadwal.html" class="nav-item">Jadwal</a>
+
+    <a href="anggota.html" class="nav-item">Anggota</a>
+   
+    <a href="tentang.html" class ="nav-item active">Tentang</a>
+
+    <a href="galeri.html" class="nav-item">Galeri</a>
+ 
+
+    </nav>
+
+
+    <!-- TENTANG KELAS -->
+    <main class="tentang">
+
+        <h1>TENTANG KELAS</h1>
+
+        <p class="subjudul">
+            X REKAYASA PERANGKAT LUNAK
+        </p>
+
+        <section class="info-kelas">
+
+            <div class="info-card">
+                <h2>🏫 Kelas</h2>
+                <p>X RPL</p>
+            </div>
+
+            <div class="info-card">
+                <h2>💻 Jurusan</h2>
+                <p>
+                    REKAYASA PERANGKAT LUNAK
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h2>👩‍🏫 Wali Kelas</h2>
+                <p>
+                   Ii Faidhotuniam Dahlan
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h2>👥 Jumlah Siswa</h2>
+                <p>
+                    36 Siswa
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="deskripsi-kelas">
+
+            <h2>Tentang X RPL</h2>
+
+            <p>
+                X RPL adalah jurusan yang berfokus pada
+                rekayasa,pengembangan,dan maintanance perangkat Lunak
+                seperti web,apk,dan lain-lain
+            </p>
+
+        </section>
+
+
+        <section class="quote-kelas">
+
+            <p>
+                "satu titik, dua koma. salah titik, salah semua"
+            </p>
+
+        </section>
+
+    </main>
+ <script>
+
+const nav=document.querySelector(".navbar");
+const glass=document.querySelector(".nav-indicator");
+const items=document.querySelectorAll(".nav-item");
+
+function move(item){
+    glass.style.left=item.offsetLeft+"px";
+    glass.style.width=item.offsetWidth+"px";
+}
+
+items.forEach(item=>{
+    item.addEventListener("click",e=>{
+
+        items.forEach(i=>i.classList.remove("active"));
+        item.classList.add("active");
+
+        move(item);
+    });
+});
+
+window.onload=()=>{
+    move(document.querySelector(".active"));
+};
+
+</script>
+</body>
+
+
+</body>
+</html>

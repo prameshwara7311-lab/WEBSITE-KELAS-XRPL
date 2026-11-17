@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anggota - X PPLG 2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+ <nav class="navbar">
+
+    <!-- LIQUID GLASS -->
+    <div class="nav-indicator"></div>
+
+     <!-- MENU -->
+    <a href="index.html" class="nav-item">Home</a>
+
+    <a href="jadwal.html" class="nav-item">Jadwal</a>
+
+    <a href="anggota.html" class="nav-item active">Anggota</a>
+   
+    <a href="tentang.html" class ="nav-item">Tentang</a>
+
+    <a href="galeri.html" class="nav-item">Galeri</a>
+
+</nav>
+
+
+</body>
+
+    </nav>
+
+
+    <!-- JUDUL -->
+    <main class="anggota">
+
+        <h1>ANGGOTA KELAS</h1>
+
+        <p>X REKAYSA PERANGKAT LUNAK</p>
+
+
+        <!-- WALI KELAS -->
+        <div class="daftar-anggota">
+
+            <div class="card wali">
+                <h2>👩‍🏫 WALI KELAS</h2>
+                <p>Ii Faidhotuniam Dahlan </p>
+            </div>
+
+
+            <!-- SISWA -->
+
+          <div class="anggota-grid">
+
+    <div class="nama-box">01 · Abdul Fikri</div>
+    <div class="nama-box">02 · Abie andriano</div>
+    <div class="nama-box">03 · Afrida Nuraeni</div>
+    <div class="nama-box">04 . Ahmad Ainul Yakin</div>
+    <div class="nama-box">05 · Ahmad fauzi</div>
+    <div class="nama-box">06 · Aida Takziah</div>
+    <div class="nama-box">07 · Alfin alfiansyah</div>
+    <div class="nama-box">08 · Atika Mustagfiroh</div>
+    <div class="nama-box">09 · Darvesh Faizullah</div>
+    <div class="nama-box">10 · Fusillat</div>
+    <div class="nama-box">11 · Gagah Nicku arfie</div>
+    <div class="nama-box">12 · Habibul Fikri Al-zikri</div>
+    <div class="nama-box">13 · Hasbi</div>
+    <div class="nama-box">14 · Kolisoh</div>
+    <div class="nama-box">15 · Humaira Batrisyia Khonsa.m.</div>
+    <div class="nama-box">16 · Ibnu Hasan Ramadhan</div>
+    <div class="nama-box">17 · Ichwanul Kholaif</div>
+    <div class="nama-box">18 · Ilham Febriansyah</div>
+    <div class="nama-box">19 · Jaffan Ahmad Azfar</div>
+    <div class="nama-box">20 · Khaerul Afandi</div>
+    <div class="nama-box">21 · Khoirul Rizki</div>
+    <div class="nama-box">22 · M.Izam maulana</div>
+    <div class="nama-box">23 · M.Fauzan Mubarok</div>
+    <div class="nama-box">24 · M.Hakim</div>
+    <div class="nama-box">25 · M.Daffa</div>
+    <div class="nama-box">26 · M.Fadillah</div>
+    <div class="nama-box">27 · M.Irawan</div>
+    <div class="nama-box">28 · M.Rafa Al-Fawazz</div>
+    <div class="nama-box">29 · Natasha Praditha</div>
+    <div class="nama-box">30 · Naufal Ibnu</div>
+    <div class="nama-box">31 · Prameshwara Putra Rahardjo</div>
+    <div class="nama-box">32 · Qianu Afrizkillah</div>
+    <div class="nama-box">33 · Rizki Yanuar</div>
+    <div class="nama-box">34 · Salvah Riyani</div>
+    <div class="nama-box">35 · Siti Harumi</div>
+    <div class="nama-box">36 · Tio Gustiawan</div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+ <script>
+
+const nav=document.querySelector(".navbar");
+const glass=document.querySelector(".nav-indicator");
+const items=document.querySelectorAll(".nav-item");
+
+function move(item){
+    glass.style.left=item.offsetLeft+"px";
+    glass.style.width=item.offsetWidth+"px";
+}
+
+items.forEach(item=>{
+    item.addEventListener("click",e=>{
+
+        items.forEach(i=>i.classList.remove("active"));
+        item.classList.add("active");
+
+        move(item);
+    });
+});
+
+window.onload=()=>{
+    move(document.querySelector(".active"));
+};
+
+</script>
+</body>
+</script>
+</body>
+
+
+
+</body>
+</html>
