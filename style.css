@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     text-align: center;
-    background: linear-gradient(135deg, #548ab6, #1a01f8);
+    background: linear-gradient(135deg, #4a90c9, #0804f8);
     font-family: Arial, sans-serif;
 }
 
@@ -175,6 +175,7 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     font-style: italic;
+    color: white;
 }
 .typing-container h1 {
     color: white;
@@ -572,4 +573,45 @@ h1 {
 #photo-list::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
+}
+
+/* gambar muter2 */
+
+.caraousel{
+    margin: 150px auto;
+    width: 100%;
+    border:0px solid red;
+    display: flex;
+    overflow-x: auto;
+   
+}
+
+.caraousel::-webkit-scrollbar{
+    display: none;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 15s infinite linear;
+    padding-right: 1em;
+    
+}
+
+.card{
+    flex: 0 0 6em;
+    height: 7em;
+    padding:0em;
+    background: none;
+    font-size: 3rem;
+    border-radius: 1em;
+    text-align:center;
+    align-content: center;
+}
+
+@keyframes spin {
+ from {translate: 0;}
+ to{translate: -100%;}
 }
