@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     text-align: center;
-    background: linear-gradient(135deg, #4a90c9, #0804f8);
+    background: linear-gradient(135deg, #4a90c9, #12007a);
     font-family: Arial, sans-serif;
 }
 
@@ -94,8 +94,8 @@ h1 {
 }
 
 .wali h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 50px;
+    margin-bottom: 5px;
 }
 
 
@@ -582,7 +582,7 @@ h1 {
     width: 100%;
     border:0px solid red;
     display: flex;
-    overflow-x: auto;
+    overflow-y: auto;
    
 }
 
@@ -600,16 +600,62 @@ h1 {
     
 }
 
-.card{
-    flex: 0 0 6em;
-    height: 7em;
-    padding:0em;
+.card {
+    flex: 0 0 300px; /* Matches image width */
+    height: 200px;   /* Matches image height (removes the 136px extra gap) */
+    padding: 0;
     background: none;
-    font-size: 3rem;
     border-radius: 1em;
-    text-align:center;
-    align-content: center;
+    overflow: hidden; /* Ensures rounded corners clip the image cleanly */
 }
+
+.card img {
+    display: block; /* Removes tiny default bottom space under inline images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents image stretching */
+}
+
+.caraousel1{
+    margin: 150px auto;
+    width: 100%;
+    border:0px solid red;
+    display: flex;
+    overflow-y: auto;
+   
+}
+
+.caraousel1::-webkit-scrollbar{
+    display: none;
+}
+
+.group1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 20s infinite linear reverse;
+    padding-right: 1em;
+    
+}
+
+.card1 {
+    flex: 0 0 300px; /* Matches image width */
+    height: 200px;   /* Matches image height (removes the 136px extra gap) */
+    padding: 0;
+    background: none;
+    border-radius: 1em;
+    overflow: hidden; /* Ensures rounded corners clip the image cleanly */
+}
+
+.card1 img {
+    display: block; /* Removes tiny default bottom space under inline images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents image stretching */
+}
+
+
 
 @keyframes spin {
  from {translate: 0;}
